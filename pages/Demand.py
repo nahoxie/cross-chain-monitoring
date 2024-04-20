@@ -21,7 +21,10 @@ with tab2:
 # Generate a sequence of dates for the next 18 months
 start_date = datetime.now().replace(day=1).date()
 date_range = {'Month':[start_date + relativedelta(months=i) for i in range(18)]}
-date_range = date_range.append('DPP',ignore_index=True)
+date_range.loc[len(date_range.index)] = ['DPP']
+
+
+
 # Create a DataFrame with the dates
 df_demand = pd.DataFrame(date_range, columns=['Month'])
 df_demand_pivot = df_demand.transpose()
