@@ -21,7 +21,7 @@ with tab2:
 # Generate a sequence of dates for the next 18 months
 start_date = datetime.now().replace(day=1).date()
 date_range = {'Month':[start_date + relativedelta(months=i) for i in range(18)]}
-date_range.loc[len(date_range.index)] = ['DPP']
+#date_range.loc[len(date_range.index)] = ['DPP']
 
 
 
