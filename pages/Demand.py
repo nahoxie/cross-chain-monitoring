@@ -11,7 +11,7 @@ import pandas as pd
 st.set_page_config(page_title='Routing', page_icon=':bar_chart:', layout='wide')
 start_date = datetime.now().replace(day=1).date()
 
-st.first_filter = st.sidebar.multiselect('Select DPP',edited_demand_data.index)
+st.first_filter = st.sidebar.multiselect('Select DPP',edited_demand_data.month)
 
 #Tabs    
 tab1, tab2 = st.tabs(["Annual Demand", "Monthly Demand"])
