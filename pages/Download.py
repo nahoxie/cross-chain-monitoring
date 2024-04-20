@@ -13,8 +13,8 @@ import zipfile
 st.header("Download")
 csv =  {
 "route.csv": st.session_state["my_global_routing_dataframe"].to_csv(index=False), 
-          "data_planned_dt.csv": filtered_df.to_csv(index=False),
-        "demand_data.csv": df_demand_pivot.to_csv(index=False)}
+          "data_planned_dt.csv": st.session_state["filtered_df"].to_csv(index=False),
+        "demand_data.csv": st.session_state["df_demand_pivot"].to_csv(index=False)}
 
 
 zip_buffer = io.BytesIO()
