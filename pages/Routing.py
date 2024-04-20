@@ -27,7 +27,7 @@ my_global_routing_dataframe  = pd.DataFrame(data_route)
 st.set_page_config(page_title='Routing', page_icon=':bar_chart:', layout='wide')
 #st.write(data_route.columns)
 st.header("Routing")
-MPP_filter = st.sidebar.multiselect('Select MPP',data_route.MPP)
+MPP_filter = st.sidebar.multiselect('Select MPP',my_global_routing_dataframe.MPP)
 filtered_df = my_global_routing_dataframe[my_global_routing_dataframe['MPP'].isin(MPP_filter)]
 st.data_editor(filtered_df,num_rows="dynamic")
 
