@@ -17,10 +17,10 @@ st.write(uploaded_file )
 
 # Check if a file was uploaded
 if uploaded_file is not None:
-    # Read the CSV file
-    df_csv = pd.read_csv(uploaded_file)
-    #df = df.transpose().apply(pd.to_numeric, errors='coerce')
-    # Display the DataFrame
+    for uploaded_file in uploaded_files:
+        # Read each uploaded CSV file
+        df = pd.read_csv(uploaded_file)
+
 new_header = df_csv.iloc[6] #grab the 6th row for the header
 df_csv = df_csv[7:] #take the data less the header row
 df_csv.columns = new_header #set the header row as the df header
