@@ -37,6 +37,7 @@ chart_demand_data = edited_demand_data.transpose().apply(pd.to_numeric, errors='
 st.dataframe(edited_demand_data)
 st.bar_chart(chart_demand_data)
 
-
 first_filter = st.sidebar.multiselect('Select DPP',chart_demand_data.columns)
-st.dataframe(chart_demand_data[chart_demand_data['index'].str.contains(first_filter, case=False)])
+st.write("Column names:", chart_demand_data.columns)
+
+#st.dataframe(chart_demand_data[chart_demand_data['index'].str.contains(first_filter, case=False)])
