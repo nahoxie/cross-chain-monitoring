@@ -7,12 +7,12 @@ from dateutil.relativedelta import relativedelta
 import streamlit as st
 import pandas as pd
 
-uploaded_file = st.file_uploader("Upload a CSV file", type=["csv"],accept_multiple_files=True)
+uploaded_files = st.file_uploader("Upload a CSV file", type=["csv"],accept_multiple_files=True)
 
 st.header("Planned DT")
 
 # Check if a file was uploaded
-if uploaded_file is not None:
+if uploaded_files is not None:
     for uploaded_file in uploaded_files:
         # Read each uploaded CSV file
         df_csv = pd.read_csv(uploaded_file)
