@@ -29,4 +29,4 @@ metric = st.sidebar.multiselect('Select Metric',df_append.Date)
 filtered_df = df_append[df_append['Date'].isin(metric)]
 
 
-#st.line_chart(filtered_df)
+st.line_chart(filtered_df)
