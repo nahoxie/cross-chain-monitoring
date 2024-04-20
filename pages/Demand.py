@@ -27,3 +27,6 @@ df_demand = pd.DataFrame(date_range, columns=['Date'])
 df_demand_pivot = df_demand.transpose()
 df_demand_pivot.columns = df_demand_pivot.iloc[0]
 df_demand_pivot = df_demand_pivot[1:]
+edited_demand_data= st.data_editor(df_demand_pivot,num_rows="dynamic")
+chart_demand_data = edited_demand_data.transpose().apply(pd.to_numeric, errors='coerce')
+st.bar_chart(chart_demand_data)
