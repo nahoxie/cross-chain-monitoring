@@ -24,8 +24,8 @@ if uploaded_files is not None:
 #df = pd.concat([df, df_csv], ignore_index=True)
 
 
-metric = st.sidebar.multiselect('Select Metric',df_csv.Date)
-filtered_df = df_csv[df_csv['Date'].isin(metric)]
-st.write("Uploaded DataFrame:",  filtered_df)
+#metric = st.sidebar.multiselect('Select Metric',df_csv.Date)
+#filtered_df = df_csv[df_csv['Date'].isin(metric)]
+st.write("Uploaded DataFrame:",  df_csv)
 
 st.line_chart(filtered_df)
