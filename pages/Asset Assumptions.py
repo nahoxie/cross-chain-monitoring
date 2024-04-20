@@ -29,7 +29,7 @@ new_header = df.iloc[6] #grab the 6th row for the header
 df = df[7:] #take the data less the header row
 df.columns = new_header #set the header row as the df header
   
-    st.write("Uploaded DataFrame:",  df)
+st.write("Uploaded DataFrame:",  df)
 
 
 
