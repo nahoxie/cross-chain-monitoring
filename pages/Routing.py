@@ -28,11 +28,11 @@ data_route = {
     "Sink": ["OSW-CM72", "OSW-88", "KIN-CM1","LOG-CM4"],
     "Active":[False,True,False,False]}
 
-@st.cache
-df_route = pd.DataFrame(data_route)
+
+my_global_routing_dataframe  = pd.DataFrame(data_route)
 
 
 st.header("Routing")
-st.data_editor(df_route,num_rows="dynamic")
+st.data_editor(my_global_routing_dataframe,num_rows="dynamic")
 st.first_filter = st.sidebar.multiselect('Select DPP',["DPP1","DPP2"])
 st.second_filter = st.sidebar.multiselect('Select Source',["OSW-HM"])
