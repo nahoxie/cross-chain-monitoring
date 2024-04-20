@@ -18,4 +18,4 @@ st.download_button(
     label="Download All DataFrames as Zip",
     data=zip_buffer,
     file_name="my_dataframes.zip",
-    mime="application/zip",
+    mime="application/zip",)
