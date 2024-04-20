@@ -18,5 +18,5 @@ df_data_planned_dt=pd.DataFrame(data_planned_dt)
 
 st.header("Planned DT")
 #st.data_editor(df_data_planned_dt,num_rows="dynamic")
-mt.spreadsheet(df_data_planned_dt)
+mt.sheet(df_data_planned_dt)
 st.asset = st.sidebar.multiselect('Select Month',["April","May"])
