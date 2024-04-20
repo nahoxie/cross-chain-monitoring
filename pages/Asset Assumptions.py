@@ -7,10 +7,13 @@ from dateutil.relativedelta import relativedelta
 import streamlit as st
 import pandas as pd
 
+uploaded_file = st.file_uploader("Upload a CSV file", type=["csv"])
+
 st.header("Planned DT")
 #st.data_editor(df_data_planned_dt,num_rows="dynamic")
-df = []
-uploaded_file = st.file_uploader("Upload a CSV file", type=["csv"])
+if uploaded_file is  None:
+    df = []
+
 
 # Check if a file was uploaded
 if uploaded_file is not None:
