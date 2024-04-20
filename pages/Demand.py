@@ -11,7 +11,6 @@ import pandas as pd
 st.set_page_config(page_title='Routing', page_icon=':bar_chart:', layout='wide')
 start_date = datetime.now().replace(day=1).date()
 
-st.first_filter = st.sidebar.multiselect('Select DPP',chart_demand_data.columns)
 
 #Tabs    
 tab1, tab2 = st.tabs(["Annual Demand", "Monthly Demand"])
@@ -37,3 +36,6 @@ edited_demand_data= st.data_editor(df_demand_pivot,num_rows="dynamic")
 chart_demand_data = edited_demand_data.transpose().apply(pd.to_numeric, errors='coerce')
 st.dataframe(edited_demand_data)
 st.bar_chart(chart_demand_data)
+
+
+st.first_filter = st.sidebar.multiselect('Select DPP',chart_demand_data.columns)
