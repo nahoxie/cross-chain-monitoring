@@ -9,9 +9,9 @@ import pandas as pd
 
 # Config
 st.set_page_config(page_title='Routing', page_icon=':bar_chart:', layout='wide')
-
+start_date = datetime.now().replace(day=1).date()
 #Tabs    
-tab1, tab2 = st.tabs(["Annual Demand", "Monthly Demand"])
+tab1, tab2 = st.tabs(["Annual Demand", "Monthly Demand" & start_date])
 
 with tab1:
   st.header("Annual Demand")
@@ -19,7 +19,7 @@ with tab1:
 with tab2:
   st.header("Monthly Demand")
 # Generate a sequence of dates for the next 18 months
-start_date = datetime.now().replace(day=1).date()
+
 date_range = {'Month':[start_date + relativedelta(months=i) for i in range(18)]}
 #date_range.loc[len(date_range.index)] = ['DPP']
 
