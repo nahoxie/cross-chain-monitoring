@@ -18,7 +18,7 @@ with tab1:
   st.header("Annual Demand")
   
 with tab2:
-  st.text("Monthly Demand ", start_date)
+  st.text(datetime.now().replace(day=1).date())
 # Generate a sequence of dates for the next 18 months
 
 date_range = {'Month':[start_date + relativedelta(months=i) for i in range(18)]}
