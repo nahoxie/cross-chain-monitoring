@@ -10,6 +10,7 @@ import pandas as pd
 data_planned_dt ={"Asset":["OSW-HM","OSW-HM"],
                   "Month":["April 2024","May 2024"],
                   "Hours":[72,24]}
+st.set_page_config(page_title='Routing', page_icon=':bar_chart:', layout='wide')
 
 df_data_planned_dt=pd.DataFrame(data_planned_dt)
 
@@ -24,7 +25,7 @@ if uploaded_file is not None:
     df = pd.read_csv(uploaded_file)
     
     # Display the DataFrame
-    st.write("Uploaded DataFrame:", df)
+    st.write("Uploaded DataFrame:",  df.iloc[7:])
 
 
 
