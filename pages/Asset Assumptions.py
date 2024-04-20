@@ -33,4 +33,4 @@ metric = st.sidebar.multiselect('Select Metric',df.Date)
 filtered_df = df[df['Date'].isin(metric)]
 st.write("Uploaded DataFrame:",  filtered_df)
 
-st.bar_chart(filtered_df)
+st.line_chart(filtered_df)
