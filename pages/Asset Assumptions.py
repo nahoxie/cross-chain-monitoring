@@ -23,7 +23,7 @@ uploaded_file = st.file_uploader("Upload a CSV file", type=["csv"])
 if uploaded_file is not None:
     # Read the CSV file
     df = pd.read_csv(uploaded_file)
-    
+    df = df.transpose().apply(pd.to_numeric, errors='coerce')
     # Display the DataFrame
 new_header = df.iloc[6] #grab the 6th row for the header
 df = df[7:] #take the data less the header row
