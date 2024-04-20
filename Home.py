@@ -5,6 +5,7 @@ from PIL import Image
 # Confit
 st.set_page_config(page_title='MacroPlanner Tool', page_icon='Home Icon', layout='wide')
 
+my_global_routing_dataframe = None
 
 # Title
 st.title('Macro Planner Upgrade Tool')
