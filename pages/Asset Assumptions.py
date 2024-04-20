@@ -30,7 +30,7 @@ df = df[7:] #take the data less the header row
 df.columns = new_header #set the header row as the df header
 
 metric = st.sidebar.multiselect('Select Metric',df.Date)
-filtered_df = df[df['Date'].str.contains(metric, case=False)]  
+filtered_df = df[df['Date'].isin(metric)]
 st.write("Uploaded DataFrame:",  filtered_df)
 
 
