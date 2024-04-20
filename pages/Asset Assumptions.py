@@ -31,3 +31,4 @@ filtered_df = df_append[df_append['Date'].isin(metric)]
 
 
 st.line_chart(filtered_df)
+st.session_state["filtered_df"] = filtered_df
