@@ -33,10 +33,10 @@ df_demand_pivot = df_demand.transpose()
 df_demand_pivot.columns = df_demand_pivot.iloc[0]
 df_demand_pivot = df_demand_pivot[1:]
 edited_demand_data= st.data_editor(df_demand_pivot,num_rows="dynamic")
-filtered_bar_chart = edited_demand_data.transpose().apply(pd.to_numeric, errors='coerce')
+chart_demand_data = edited_demand_data.transpose().apply(pd.to_numeric, errors='coerce')
 st.dataframe(edited_demand_data)
-st.bar_chart(filtered_bar_chart)
+st.bar_chart(chart_demand_data)
 
 
 first_filter = st.sidebar.multiselect('Select DPP',chart_demand_data.columns)
-filtered_bar_chart filtered_bar_chart[filtered_bar_chart['index'].str.contains(first_filter, case=False)]
+#filtered_bar_chart filtered_bar_chart[filtered_bar_chart['index'].str.contains(first_filter, case=False)]
