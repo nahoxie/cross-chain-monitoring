@@ -31,6 +31,4 @@ df.columns = new_header #set the header row as the df header
   
 st.write("Uploaded DataFrame:",  df)
 
-
-
-st.asset = st.sidebar.multiselect('Select Month',["April","May"])
+st.asset = st.sidebar.multiselect('Select Metric',df.date)
