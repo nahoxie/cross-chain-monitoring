@@ -41,3 +41,4 @@ first_filter = st.sidebar.multiselect('Select DPP',chart_demand_data.columns)
 st.dataframe(edited_demand_data)
 
 #st.dataframe(chart_demand_data[chart_demand_data['index'].str.contains(first_filter, case=False)])
+st.session_state["df_demand_pivot"] = df_demand_pivot
