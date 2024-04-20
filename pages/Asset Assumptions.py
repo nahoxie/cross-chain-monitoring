@@ -8,7 +8,7 @@ import streamlit as st
 import pandas as pd
 
 uploaded_files = st.file_uploader("Upload a CSV file", type=["csv"],accept_multiple_files=True)
-
+st.set_page_config(page_title='Routing', page_icon=':bar_chart:', layout='wide')
 st.header("Planned DT")
 
 # Check if a file was uploaded
