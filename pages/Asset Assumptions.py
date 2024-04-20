@@ -22,7 +22,8 @@ new_header = df_csv.iloc[6] #grab the 6th row for the header
 df_csv = df_csv[7:] #take the data less the header row
 df_csv.columns = new_header #set the header row as the df header
 
-df_csv= df_csv.append(df_csv)
+df = pd.concat([df, df_csv], ignore_index=True)
+
 
 metric = st.sidebar.multiselect('Select Metric',df.Date)
 filtered_df = df[df['Date'].isin(metric)]
