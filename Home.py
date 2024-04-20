@@ -3,7 +3,7 @@ import streamlit as st
 from PIL import Image
 
 # Confit
-st.set_page_config(page_title='MacroPlanner Tool', page_icon=':bar_chart:', layout='wide')
+st.set_page_config(page_title='MacroPlanner Tool', page_icon='Home Icon', layout='wide')
 
 
 # Title
