@@ -23,7 +23,7 @@ start_date = datetime.now().replace(day=1).date()
 date_range = {'DPP':["DPP1"],'Month':[start_date + relativedelta(months=i) for i in range(18)]}
 
 # Create a DataFrame with the dates
-df_demand = pd.DataFrame(date_range, columns=['Month'])
+df_demand = pd.DataFrame(date_range, columns=['DPP','Month'])
 df_demand_pivot = df_demand.transpose()
 df_demand_pivot.columns = df_demand_pivot.iloc[0]
 df_demand_pivot = df_demand_pivot[1:]
