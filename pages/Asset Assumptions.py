@@ -21,9 +21,8 @@ if uploaded_files is not None:
         new_header = df_csv.iloc[6] #grab the 6th row for the header
         df_csv = df_csv[7:] #take the data less the header row
         df_csv.columns = new_header #set the header row as the df header
-        st.write("Uploaded DataFrame:",  df_csv)
         df_append = pd.concat([df_csv], ignore_index=True)
-
+        st.write("Uploaded DataFrame:",  df_append)
 
 #df = pd.concat([df, df_csv], ignore_index=True)
 
