@@ -7,8 +7,6 @@ from dateutil.relativedelta import relativedelta
 import streamlit as st
 import pandas as pd
 
-import mitosheet as mt
-
 data_planned_dt ={"Asset":["OSW-HM","OSW-HM"],
                   "Month":["April 2024","May 2024"],
                   "Hours":[72,24]}
@@ -19,5 +17,5 @@ df_data_planned_dt=pd.DataFrame(data_planned_dt)
 
 st.header("Planned DT")
 #st.data_editor(df_data_planned_dt,num_rows="dynamic")
-mt.sheet(df_data_planned_dt)
+
 st.asset = st.sidebar.multiselect('Select Month',["April","May"])
