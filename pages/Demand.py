@@ -39,4 +39,4 @@ st.bar_chart(chart_demand_data)
 
 
 first_filter = st.sidebar.multiselect('Select DPP',chart_demand_data.columns)
-#filtered_bar_chart filtered_bar_chart[filtered_bar_chart['index'].str.contains(first_filter, case=False)]
+st.dataframe(chart_demand_data[chart_demand_data['index'].str.contains(first_filter, case=False)])
