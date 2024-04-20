@@ -36,3 +36,6 @@ st.header("Routing")
 st.data_editor(my_global_routing_dataframe,num_rows="dynamic")
 st.first_filter = st.sidebar.multiselect('Select DPP',["DPP1","DPP2"])
 st.second_filter = st.sidebar.multiselect('Select Source',["OSW-HM"])
+
+
+st.session_state["my_global_routing_dataframe"] = my_global_routing_dataframe
