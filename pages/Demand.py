@@ -10,7 +10,8 @@ import pandas as pd
 # Config
 st.set_page_config(page_title='Routing', page_icon=':bar_chart:', layout='wide')
 start_date = datetime.now().replace(day=1).date()
-Title = "Monthly Demand " & start_date
+Title = st.markdown(f"#### \"<span style='color:blue'>{state_name}</span> Monthly Demand  {start_date}\"", unsafe_allow_html=True)
+
 #Tabs    
 tab1, tab2 = st.tabs(["Annual Demand", Title])
 
