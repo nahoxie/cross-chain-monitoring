@@ -12,13 +12,13 @@ st.set_page_config(page_title='Routing', page_icon=':bar_chart:', layout='wide')
 start_date = datetime.now().replace(day=1).date()
 
 #Tabs    
-tab1, tab2 = st.tabs(["Annual Demand", start_date])
+tab1, tab2 = st.tabs(["Annual Demand", "Monthly Demand"])
 
 with tab1:
   st.header("Annual Demand")
   
 with tab2:
-  st.header("Monthly Demand")
+  st.header("Monthly Demand ", start_date)
 # Generate a sequence of dates for the next 18 months
 
 date_range = {'Month':[start_date + relativedelta(months=i) for i in range(18)]}
