@@ -9,7 +9,7 @@ import pandas as pd
 
 st.header("Planned DT")
 #st.data_editor(df_data_planned_dt,num_rows="dynamic")
-
+df = []
 uploaded_file = st.file_uploader("Upload a CSV file", type=["csv"])
 
 # Check if a file was uploaded
