@@ -25,7 +25,7 @@ if uploaded_file is not None:
     df = pd.read_csv(uploaded_file)
     
     # Display the DataFrame
-    st.write("Uploaded DataFrame:",  df.iloc[7:])
+    st.write("Uploaded DataFrame:",  df.iloc[6:])
 
 
 
