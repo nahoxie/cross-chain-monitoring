@@ -31,7 +31,7 @@ data_route = {
 df_route = pd.DataFrame(data_route)
 
 
-  st.header("Demand")
-  edited_demand_data= st.data_editor(df_demand_pivot,num_rows="dynamic")
-  chart_demand_data = edited_demand_data.transpose().apply(pd.to_numeric, errors='coerce')
-  st.bar_chart(chart_demand_data)
+st.header("Demand")
+edited_demand_data= st.data_editor(df_demand_pivot,num_rows="dynamic")
+chart_demand_data = edited_demand_data.transpose().apply(pd.to_numeric, errors='coerce')
+st.bar_chart(chart_demand_data)
