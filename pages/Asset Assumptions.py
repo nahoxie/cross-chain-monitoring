@@ -10,9 +10,6 @@ import pandas as pd
 uploaded_file = st.file_uploader("Upload a CSV file", type=["csv"],accept_multiple_files=True)
 
 st.header("Planned DT")
-#st.data_editor(df_data_planned_dt,num_rows="dynamic")
-if uploaded_file is  None:
-
 
 # Check if a file was uploaded
 if uploaded_file is not None:
