@@ -13,9 +13,19 @@ data_planned_dt ={"Asset":["OSW-HM","OSW-HM"],
 
 df_data_planned_dt=pd.DataFrame(data_planned_dt)
 
-
-
 st.header("Planned DT")
 #st.data_editor(df_data_planned_dt,num_rows="dynamic")
+
+uploaded_file = st.file_uploader("Upload a CSV file", type=["csv"])
+
+# Check if a file was uploaded
+if uploaded_file is not None:
+    # Read the CSV file
+    df = pd.read_csv(uploaded_file)
+    
+    # Display the DataFrame
+    st.write("Uploaded DataFrame:", df)
+
+
 
 st.asset = st.sidebar.multiselect('Select Month',["April","May"])
