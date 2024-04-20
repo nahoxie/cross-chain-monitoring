@@ -22,7 +22,7 @@ if uploaded_files is not None:
         df_csv = df_csv[7:] #take the data less the header row
         df_csv.columns = new_header #set the header row as the df header
         st.write("Uploaded DataFrame:",  df_csv)
-
+        df = append(df,df_csv)
 
 #df = pd.concat([df, df_csv], ignore_index=True)
 
