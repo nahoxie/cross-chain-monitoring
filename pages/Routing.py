@@ -28,6 +28,7 @@ data_route = {
     "Sink": ["OSW-CM72", "OSW-88", "KIN-CM1","LOG-CM4"],
     "Active":[False,True,False,False]}
 
+@st.cache
 df_route = pd.DataFrame(data_route)
 
 
