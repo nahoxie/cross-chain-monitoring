@@ -7,7 +7,7 @@ from dateutil.relativedelta import relativedelta
 import streamlit as st
 import pandas as pd
 
-uploaded_file = st.file_uploader("Upload a CSV file", type=["csv"])
+uploaded_file = st.file_uploader("Upload a CSV file", type=["csv"],accept_multiple_files=True)
 
 st.header("Planned DT")
 #st.data_editor(df_data_planned_dt,num_rows="dynamic")
@@ -25,11 +25,11 @@ new_header = df_csv.iloc[6] #grab the 6th row for the header
 df_csv = df_csv[7:] #take the data less the header row
 df_csv.columns = new_header #set the header row as the df header
 
-df = pd.concat([df, df_csv], ignore_index=True)
+#df = pd.concat([df, df_csv], ignore_index=True)
 
 
-metric = st.sidebar.multiselect('Select Metric',df.Date)
-filtered_df = df[df['Date'].isin(metric)]
+metric = st.sidebar.multiselect('Select Metric',df_csv.Date)
+filtered_df = df_csv[df_csv['Date'].isin(metric)]
 st.write("Uploaded DataFrame:",  filtered_df)
 
 st.line_chart(filtered_df)
