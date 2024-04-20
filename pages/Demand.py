@@ -38,6 +38,6 @@ st.dataframe(edited_demand_data)
 st.bar_chart(chart_demand_data)
 
 first_filter = st.sidebar.multiselect('Select DPP',chart_demand_data.columns)
-st.write("Column names:", df_demand_pivot.columns)
+st.dataframe(edited_demand_data)
 
 #st.dataframe(chart_demand_data[chart_demand_data['index'].str.contains(first_filter, case=False)])
