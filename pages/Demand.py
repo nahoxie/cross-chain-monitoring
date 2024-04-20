@@ -19,6 +19,7 @@ with tab1:
 with tab2:
   st.header("Monthly Demand")
 # Generate a sequence of dates for the next 18 months
+start_date = datetime.now().replace(day=1).date()
 date_range = [start_date + relativedelta(months=i) for i in range(18)]
 
 # Create a DataFrame with the dates
