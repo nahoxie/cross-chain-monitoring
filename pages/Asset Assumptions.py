@@ -28,7 +28,7 @@ if uploaded_file is not None:
 new_header = df.iloc[6] #grab the 6th row for the header
 df = df[7:] #take the data less the header row
 df.columns = new_header #set the header row as the df header
-filtered_df = df  
-st.write("Uploaded DataFrame:",  df)
+filtered_df = df[df['Date'].str.contains(metric, case=False)]  
+st.write("Uploaded DataFrame:",  filtered_df)
 
-st.asset = st.sidebar.multiselect('Select Metric',df.Date)
+metric = st.sidebar.multiselect('Select Metric',df.Date)
