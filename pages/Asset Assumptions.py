@@ -13,7 +13,7 @@ st.header("Planned DT")
 #st.data_editor(df_data_planned_dt,num_rows="dynamic")
 if uploaded_file is  None:
     df = []
-
+st.write(uploaded_file )
 
 # Check if a file was uploaded
 if uploaded_file is not None:
