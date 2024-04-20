@@ -16,10 +16,11 @@ if uploaded_files is not None:
     for uploaded_file in uploaded_files:
         # Read each uploaded CSV file
         df_csv = pd.read_csv(uploaded_file)
+        new_header = df_csv.iloc[6] #grab the 6th row for the header
+        df_csv = df_csv[7:] #take the data less the header row
+        df_csv.columns = new_header #set the header row as the df header
         st.write("Uploaded DataFrame:",  df_csv)
-#new_header = df_csv.iloc[6] #grab the 6th row for the header
-#df_csv = df_csv[7:] #take the data less the header row
-#df_csv.columns = new_header #set the header row as the df header
+
 
 #df = pd.concat([df, df_csv], ignore_index=True)
 
