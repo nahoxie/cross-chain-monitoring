@@ -22,8 +22,7 @@ if uploaded_files is not None:
         df_csv = df_csv[7:] #take the data less the header row
         df_csv.columns = new_header #set the header row as the df header
         df_append = pd.concat([df_csv], ignore_index=True)
-        
-st.write("Uploaded DataFrame:",  df_append)
+    st.write("Uploaded DataFrame:",  df_append)
 
 metric = st.sidebar.multiselect('Select Metric',df_append.Date)
 filtered_df = df_append[df_append['Date'].isin(metric)]
