@@ -11,7 +11,7 @@ import pandas as pd
 st.set_page_config(page_title='Routing', page_icon=':bar_chart:', layout='wide')
 start_date = datetime.now().replace(day=1).date()
 #Tabs    
-tab1, tab2 = st.tabs(["Annual Demand", "Monthly Demand" & start_date])
+tab1, tab2 = st.tabs(["Annual Demand", "Monthly Demand " + start_date])
 
 with tab1:
   st.header("Annual Demand")
