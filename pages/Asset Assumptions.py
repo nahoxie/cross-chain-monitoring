@@ -25,8 +25,8 @@ if uploaded_files is not None:
         
 st.write("Uploaded DataFrame:",  df_append)
 
-#metric = st.sidebar.multiselect('Select Metric',df_csv.Date)
-#filtered_df = df_csv[df_csv['Date'].isin(metric)]
+metric = st.sidebar.multiselect('Select Metric',df_append.Date)
+filtered_df = df_append[df_append['Date'].isin(metric)]
 
 
 #st.line_chart(filtered_df)
