@@ -6,6 +6,8 @@ from PIL import Image
 st.set_page_config(page_title='MacroPlanner Tool', page_icon='Home Icon', layout='wide')
 
 my_global_routing_dataframe = None
+st.session_state["my_dataframe"] = my_dataframe
+
 
 # Title
 st.title('Macro Planner Upgrade Tool')
