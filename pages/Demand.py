@@ -24,10 +24,10 @@ with tab1:
   df_demand_pivot_Auto = df_demand_Auto.transpose()
   df_demand_pivot_Auto.columns = df_demand_pivot_Auto.iloc[0]
   df_demand_pivot_Auto = df_demand_pivot_Auto[1:]
-#  edited_demand_data_Auto= st.data_editor(df_demand_pivot_Auto,num_rows="dynamic")
-#  chart_demand_data_Auto = edited_demand_data_Auto.transpose().apply(pd.to_numeric, errors='coerce')
-#  st.dataframe(edited_demand_data_Auto)
-#  st.bar_chart(chart_demand_data_Auto)
+  edited_demand_data_Auto= st.data_editor(df_demand_pivot_Auto,num_rows="dynamic")
+  chart_demand_data_Auto = edited_demand_data_Auto.transpose().apply(pd.to_numeric, errors='coerce')
+  st.dataframe(edited_demand_data_Auto)
+  st.bar_chart(chart_demand_data_Auto)
   
 with tab2:
   st.header("Can")
@@ -61,8 +61,8 @@ with tab3:
 
 
 
-first_filter = st.sidebar.multiselect('Select DPP',chart_demand_data.columns)
+first_filter = st.sidebar.multiselect('Select DPP',chart_demand_data_Auto.columns)
 
 
-#st.dataframe(chart_demand_data[chart_demand_data['index'].str.contains(first_filter, case=False)])
+#st.dataframe(chart_demand_data_Auto[chart_demand_data['index'].str.contains(first_filter, case=False)])
 st.session_state["df_demand_pivot"] = df_demand_pivot_Auto
