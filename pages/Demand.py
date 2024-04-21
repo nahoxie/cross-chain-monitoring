@@ -18,6 +18,7 @@ tab1, tab2, tab3 = st.tabs(["Automotive", "Can","Specialties"])
 
 with tab1:
   st.header("Automotive Demand for the next 18 months")
+  uploaded_files = st.file_uploader("Upload a CSV file", type=["csv"],accept_multiple_files=True)
   st.button("Save Auto demand")
 # Generate a sequence of dates for the next 18 months
 # Create a DataFrame with the dates
