@@ -32,7 +32,6 @@ with tab2:
   st.header("Can")
   st.text(datetime.now().replace(day=1).date())
 # Generate a sequence of dates for the next 18 months
-  date_range = {'Month':[start_date + relativedelta(months=i) for i in range(18)]}
 # Create a DataFrame with the dates
   df_demand_Can = pd.DataFrame(date_range, columns=['Month'])
   df_demand_pivot_Can = df_demand_Can.transpose()
@@ -47,7 +46,6 @@ with tab3:
   st.header("Specialties")
   st.text(datetime.now().replace(day=1).date())
 # Generate a sequence of dates for the next 18 months
-  date_range = {'Month':[start_date + relativedelta(months=i) for i in range(18)]}
 # Create a DataFrame with the dates
   df_demand_Specialties = pd.DataFrame(date_range, columns=['Month'])
   df_demand_pivot_Specialties = df_demand_Specialties.transpose()
