@@ -36,7 +36,7 @@ with tab2:
   date_range = {'Month':[start_date + relativedelta(months=i) for i in range(18)]}
 # Create a DataFrame with the dates
   df_demand_Can = pd.DataFrame(date_range, columns=['Month'])
-  df_demand_pivot_Can = df_demand.transpose()
+  df_demand_pivot_Can = df_demand_Can.transpose()
   df_demand_pivot_Can.columns = df_demand_pivot_Can.iloc[0]
   df_demand_pivot_Can = df_demand_pivot[1:]
   edited_demand_data_Can= st.data_editor(df_demand_pivot_Can,num_rows="dynamic")
