@@ -23,7 +23,7 @@ with tab1:
   df_demand_pivot_Auto = df_demand_Auto.transpose()
   df_demand_pivot_Auto.columns = df_demand_pivot_Auto.iloc[0]
   df_demand_pivot_Auto = df_demand_pivot_Auto[1:]
-  edited_demand_data_Auto= st.data_editor(df_demand_pivot_Auto,num_rows="dynamic")
+  edited_demand_data_Auto= st.data_editor(df_demand_pivot_Auto,num_rows="dynamic",height=1001)
   chart_demand_data_Auto = edited_demand_data_Auto.transpose().apply(pd.to_numeric, errors='coerce')
   st.dataframe(edited_demand_data_Auto)
   st.bar_chart(chart_demand_data_Auto)
@@ -37,11 +37,10 @@ with tab2:
   df_demand_pivot_Can = df_demand_Can.transpose()
   df_demand_pivot_Can.columns = df_demand_pivot_Can.iloc[0]
   df_demand_pivot_Can = df_demand_pivot_Can[1:]
-  st.dataframe(df_demand_pivot_Can)
-  edited_demand_data_Can= st.data_editor(df_demand_pivot_Can,num_rows="dynamic",height=1200)
-#  chart_demand_data_Can = edited_demand_data_Can.transpose().apply(pd.to_numeric, errors='coerce')
-#  st.dataframe(edited_demand_data_Can)
-#  st.bar_chart(chart_demand_data_Can)
+  edited_demand_data_Can= st.data_editor(df_demand_pivot_Can,num_rows="dynamic",height=1000)
+  chart_demand_data_Can = edited_demand_data_Can.transpose().apply(pd.to_numeric, errors='coerce')
+  st.dataframe(edited_demand_data_Can)
+  st.bar_chart(chart_demand_data_Can)
 
 with tab3:
   st.header("Specialties")
@@ -52,10 +51,10 @@ with tab3:
   df_demand_pivot_Specialties = df_demand_Specialties.transpose()
   df_demand_pivot_Specialties.columns = df_demand_pivot_Specialties.iloc[0]
   df_demand_pivot_Specialties = df_demand_pivot_Specialties[1:]
-#  edited_demand_data_Specialties= st.data_editor(df_demand_pivot_Auto,num_rows="dynamic")
-#  chart_demand_data_Specialties = edited_demand_data_Specialties.transpose().apply(pd.to_numeric, errors='coerce')
-#  st.dataframe(edited_demand_data_Specialties)
-#  st.bar_chart(chart_demand_data_Specialties)
+  edited_demand_data_Specialties= st.data_editor(df_demand_pivot_Auto,num_rows="dynamic",,height=1002)
+  chart_demand_data_Specialties = edited_demand_data_Specialties.transpose().apply(pd.to_numeric, errors='coerce')
+  st.dataframe(edited_demand_data_Specialties)
+  st.bar_chart(chart_demand_data_Specialties)
 
 
 
