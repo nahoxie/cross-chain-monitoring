@@ -1,13 +1,24 @@
 # Libraries
 import streamlit as st
 from PIL import Image
-
+import 
 # Confit
 st.set_page_config(page_title='MacroPlanner Tool', page_icon='Home Icon', layout='wide')
 
 my_global_routing_dataframe = None
 
+engine = sqlalchemy.create_engine(CONNECTION)
 
+def run_query(query):
+    with engine.connect() as con:
+        rs = con.execute(query)
+        df = pd.DataFrame(rs.fetchall(), columns=rs.keys())
+    return df
+
+query = "SELECT * FROM my_delta_table"
+
+result_df = run_query(query)
+st.dataframe(result_df)
 
 # Title
 st.title('Macro Planner Upgrade Tool')
