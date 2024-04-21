@@ -18,7 +18,7 @@ tab1, tab2, tab3 = st.tabs(["Automotive", "Can","Specialties"])
 
 with tab1:
   table_data = [[]]
-    for _ in range(2):
+	for _ in range(2):
         table_data[0].append(None)
 
     # Create a Streamlit UI for the table
