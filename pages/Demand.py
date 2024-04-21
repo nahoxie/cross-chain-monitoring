@@ -38,7 +38,7 @@ with tab2:
   df_demand_Can = pd.DataFrame(date_range, columns=['Month'])
   df_demand_pivot_Can = df_demand_Can.transpose()
   df_demand_pivot_Can.columns = df_demand_pivot_Can.iloc[0]
-  df_demand_pivot_Can = df_demand_pivot[1:]
+  df_demand_pivot_Can = df_demand_pivot_Can[1:]
   edited_demand_data_Can= st.data_editor(df_demand_pivot_Can,num_rows="dynamic")
   chart_demand_data_Can = edited_demand_data_Can.transpose().apply(pd.to_numeric, errors='coerce')
   st.dataframe(edited_demand_data_Can)
