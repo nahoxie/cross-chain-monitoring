@@ -10,7 +10,7 @@ import pandas as pd
 # Config
 st.set_page_config(page_title='Routing', page_icon=':bar_chart:', layout='wide')
 start_date = datetime.now().replace(day=1).date()
-
+date_range = {'Month':[start_date + relativedelta(months=i) for i in range(18)]}
 
 #Tabs    
 tab1, tab2, tab3 = st.tabs(["Automotive", "Can","Specialties"])
@@ -18,7 +18,6 @@ tab1, tab2, tab3 = st.tabs(["Automotive", "Can","Specialties"])
 with tab1:
   st.header("Automotive")
 # Generate a sequence of dates for the next 18 months
-  date_range = {'Month':[start_date + relativedelta(months=i) for i in range(18)]}
 # Create a DataFrame with the dates
   df_demand_Auto = pd.DataFrame(date_range, columns=['Month'])
   df_demand_pivot_Auto = df_demand_Auto.transpose()
