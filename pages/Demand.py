@@ -17,6 +17,7 @@ tab1, tab2, tab3 = st.tabs(["Automotive", "Can","Specialties"])
 
 with tab1:
   st.header("Automotive")
+  st.button("Save demand")
 # Generate a sequence of dates for the next 18 months
 # Create a DataFrame with the dates
   df_demand_Auto = pd.DataFrame(date_range, columns=['Month'])
