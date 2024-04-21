@@ -14,13 +14,13 @@ engine = sqlalchemy.create_engine(CONNECTION)
 st.title('Macro Planner Upgrade Tool')
 
 # Blockchains
- c1, c2, c3, c4, c5, c6 = st.columns(6)
- c1.image(Image.open('images/arbitrum-logo.png'))
- c2.image(Image.open('images/avalanche-logo.png'))
- c3.image(Image.open('images/bsc-logo.png'))
- c4.image(Image.open('images/ethereum-logo.png'))
- c5.image(Image.open('images/optimism-logo.png'))
- c6.image(Image.open('images/polygon-logo.png'))
+c1, c2, c3, c4, c5, c6 = st.columns(6)
+c1.image(Image.open('images/arbitrum-logo.png'))
+c2.image(Image.open('images/avalanche-logo.png'))
+c3.image(Image.open('images/bsc-logo.png'))
+c4.image(Image.open('images/ethereum-logo.png'))
+c5.image(Image.open('images/optimism-logo.png'))
+c6.image(Image.open('images/polygon-logo.png'))
 
 # TOol Overview
 st.write(
