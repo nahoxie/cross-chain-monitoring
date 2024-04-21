@@ -16,8 +16,8 @@ date_range = {'Month':[start_date + relativedelta(months=i) for i in range(18)]}
 tab1, tab2, tab3 = st.tabs(["Automotive", "Can","Specialties"])
 
 with tab1:
-  st.header("Automotive for the following date",start_date )
-  st.button("Save demand")
+  st.header("Automotive Demand for the next 18 months")
+  st.button("Save Auto demand")
 # Generate a sequence of dates for the next 18 months
 # Create a DataFrame with the dates
   df_demand_Auto = pd.DataFrame(date_range, columns=['Month'])
@@ -30,8 +30,9 @@ with tab1:
   st.bar_chart(chart_demand_data_Auto)
   
 with tab2:
-  st.header("Can")
-  st.text(datetime.now().replace(day=1).date())
+  st.header("Can Demand for the next 18 months")
+  st.button("Save Can demand")
+#  st.text(datetime.now().replace(day=1).date())
 # Generate a sequence of dates for the next 18 months
 # Create a DataFrame with the dates
   df_demand_Can = pd.DataFrame(date_range, columns=['Month'])
@@ -44,8 +45,9 @@ with tab2:
   st.bar_chart(chart_demand_data_Can)
 
 with tab3:
-  st.header("Specialties")
-  st.text(datetime.now().replace(day=1).date())
+  st.header("Specialties Demand for the next 18 months")
+  st.button("Save Specialties demand")
+# st.text(datetime.now().replace(day=1).date())
 # Generate a sequence of dates for the next 18 months
 # Create a DataFrame with the dates
   df_demand_Specialties = pd.DataFrame(date_range, columns=['Month'])
