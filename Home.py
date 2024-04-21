@@ -1,7 +1,7 @@
 # Libraries
 import streamlit as st
 from PIL import Image
-import 
+ 
 # Confit
 st.set_page_config(page_title='MacroPlanner Tool', page_icon='Home Icon', layout='wide')
 
