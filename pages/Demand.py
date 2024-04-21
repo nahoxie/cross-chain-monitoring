@@ -6,6 +6,7 @@ from datetime import datetime
 from dateutil.relativedelta import relativedelta
 import streamlit as st
 import pandas as pd
+from PIL import Image
 
 # Config
 st.set_page_config(page_title='Routing', page_icon=':bar_chart:', layout='wide')
