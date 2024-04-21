@@ -17,8 +17,27 @@ date_range = {'Month':[start_date + relativedelta(months=i) for i in range(18)]}
 tab1, tab2, tab3 = st.tabs(["Automotive", "Can","Specialties"])
 
 with tab1:
+  table_data = [[]]
+    for _ in range(2):
+        table_data[0].append(None)
+
+    # Create a Streamlit UI for the table
+  st.title("Table with Buttons")
+
+  # Create a table
+  table = st.table(table_data)
+
+# Add buttons to each cell
+	for i in range(1):
+   	 	for j in range(2):
+        	button_label = f"Button {i}-{j}"
+        	if table_data[i][j] is None:
+            	table_data[i][j] = st.button(button_label)
+
+# Display the table
+table.table(table_data) 
   st.header("Automotive Demand for the next 18 months")
-  uploaded_files = st.file_uploader("Upload a CSV file", type=["csv"],accept_multiple_files=True)
+  uploaded_files = st.file_uploader("Upload a CSV file for demand", type=["csv"],accept_multiple_files=false)
   st.button("Save Auto demand")
 # Generate a sequence of dates for the next 18 months
 # Create a DataFrame with the dates
