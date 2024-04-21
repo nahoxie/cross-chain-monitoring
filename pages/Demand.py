@@ -39,7 +39,7 @@ with tab2:
   df_demand_pivot_Can = df_demand_Can.transpose()
   df_demand_pivot_Can.columns = df_demand_pivot_Can.iloc[0]
   df_demand_pivot_Can = df_demand_pivot_Can[1:]
-#  edited_demand_data_Can= st.data_editor(df_demand_pivot_Auto,num_rows="dynamic")
+  edited_demand_data_Can= st.data_editor(df_demand_pivot_Auto,num_rows="dynamic")
 #  chart_demand_data_Can = edited_demand_data_Can.transpose().apply(pd.to_numeric, errors='coerce')
 #  st.dataframe(edited_demand_data_Can)
 #  st.bar_chart(chart_demand_data_Can)
