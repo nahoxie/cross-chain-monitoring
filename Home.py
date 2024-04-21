@@ -8,7 +8,7 @@ st.set_page_config(page_title='MacroPlanner Tool', page_icon='Home Icon', layout
 
 my_global_routing_dataframe = None
 
-engine = sqlalchemy.create_engine(CONNECTION)
+#engine = sqlalchemy.create_engine(CONNECTION)
 
 # Title
 st.title('Macro Planner Upgrade Tool')
