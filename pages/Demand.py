@@ -24,10 +24,10 @@ with tab1:
   df_demand_pivot_Auto = df_demand_Auto.transpose()
   df_demand_pivot_Auto.columns = df_demand_pivot_Auto.iloc[0]
   df_demand_pivot_Auto = df_demand_pivot_Auto[1:]
-  edited_demand_data_Auto= st.data_editor(df_demand_pivot_Auto,num_rows="dynamic")
-  chart_demand_data_Auto = edited_demand_data_Auto.transpose().apply(pd.to_numeric, errors='coerce')
-  st.dataframe(edited_demand_data_Auto)
-  st.bar_chart(chart_demand_data_Auto)
+#  edited_demand_data_Auto= st.data_editor(df_demand_pivot_Auto,num_rows="dynamic")
+#  chart_demand_data_Auto = edited_demand_data_Auto.transpose().apply(pd.to_numeric, errors='coerce')
+#  st.dataframe(edited_demand_data_Auto)
+#  st.bar_chart(chart_demand_data_Auto)
   
 with tab2:
   st.header("Can")
