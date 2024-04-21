@@ -16,7 +16,8 @@ date_range = {'Month':[start_date + relativedelta(months=i) for i in range(18)]}
 tab1, tab2, tab3 = st.tabs(["Automotive", "Can","Specialties"])
 
 with tab1:
-  st.header("Automotive Demand for the next 18 months")
+  c1, c2, c3, c4, c5, c6 = st.columns(6)
+  c1.st.header("Automotive Demand for the next 18 months")
   st.button("Save Auto demand")
 # Generate a sequence of dates for the next 18 months
 # Create a DataFrame with the dates
